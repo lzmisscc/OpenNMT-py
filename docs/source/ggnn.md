@@ -1,4 +1,4 @@
-# Gated Graph Sequence Neural Networks
+ # Gated Graph Sequence Neural Networks
 
 Graph-to-sequence networks allow information represtable as a graph (such as an annotated NLP sentence or computer code structure as an AST) to be connected to a sequence generator to produce output which can benefit from the graph structure of the input.
 

@@ -67,7 +67,7 @@ class ImageDataReader(DataReaderBase):
             img_path = os.path.join(img_dir, filename)
             if not os.path.exists(img_path):
                 img_path = filename
-
+                
             assert os.path.exists(img_path), \
                 'img path %s not found' % filename
 
@@ -94,6 +94,11 @@ def batch_img(data, vocab):
     c = data[0].size(0)
     h = max([t.size(1) for t in data])
     w = max([t.size(2) for t in data])
+
+    # 自定义插入
+    h = max(h, 64)
+    w = max(w, 64)
+
     imgs = torch.zeros(len(data), c, h, w).fill_(1)
     for i, img in enumerate(data):
         imgs[i, :, 0:img.size(1), 0:img.size(2)] = img

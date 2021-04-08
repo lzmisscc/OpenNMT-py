@@ -1,0 +1,12 @@
+onmt_translate -data_type img \
+               -model demo-v2-model_step_100000.pt \
+               -src_dir images \
+               -src src-test.txt \
+               -output pred_v2.txt \
+               -max_length 3000 \
+               -beam_size 5 \
+               -gpu 0 \
+                -image_channel_size 1 \
+                -batch_size 1 \
+                -report_time \
+               -verbose

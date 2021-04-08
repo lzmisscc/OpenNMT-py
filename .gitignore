@@ -111,3 +111,4 @@ ENV/
 # Tensorboard
 runs/
 .vscode/settings.json
+table2html/html/

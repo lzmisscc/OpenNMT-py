@@ -1,0 +1,11 @@
+onmt_preprocess -data_type img \
+                -src_dir data_v2 \
+                -train_src src-train \
+                -train_tgt tgt-train -valid_src src-val \
+                -valid_tgt tgt-val -save_data demo \
+                -tgt_seq_length 3000 \
+                -tgt_words_min_frequency 2 \
+                -shard_size 50000 \
+                -image_channel_size 1 \
+                -overwrite \
+                --seed 100

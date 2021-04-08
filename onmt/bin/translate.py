@@ -9,6 +9,7 @@ from onmt.translate.translator import build_translator
 
 import onmt.opts as opts
 from onmt.utils.parse import ArgumentParser
+import time
 
 
 def translate(opt):
@@ -30,7 +31,7 @@ def translate(opt):
             batch_type=opt.batch_type,
             attn_debug=opt.attn_debug,
             align_debug=opt.align_debug
-            )
+        )
 
 
 def _get_parser():

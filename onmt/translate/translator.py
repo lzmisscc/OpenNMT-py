@@ -125,7 +125,7 @@ class Translator(object):
             phrase_table="",
             data_type="text",
             verbose=False,
-            report_time=False,
+            report_time=True,
             copy_attn=False,
             global_scorer=None,
             out_file=None,
